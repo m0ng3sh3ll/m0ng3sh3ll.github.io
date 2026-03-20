@@ -1,43 +1,319 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    h1 {
-      margin-top: 20px;
-      color: #333;
-    }
-
-    p {
-      color: #666;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M0ng3Sh3ll</title>
+  <meta name="description" content="M0ng3Sh3ll" />
+  <meta property="og:title" content="M0ng3Sh3ll" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body>
-  <div class="container">
-    <img src="img/underconstruction.jpg" alt="Under Construction">
-  </div>
+
+  <canvas id="matrix-canvas"></canvas>
+
+  <nav>
+    <a href="#home" class="nav-logo"><span>&gt;_</span> M0NG3SH3LL</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#studies">studies</a>
+      <a href="#contact">contact</a>
+    </div>
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="hero-init" id="hero-init"></div>
+      <h1 class="hero-name glitch" id="hero-name" data-text="M0ng3Sh3ll">M0ng3Sh3ll</h1>
+      <p class="hero-sub" id="hero-sub">Red Team Operator | Wi-Fi | Pentester | Cloud Security </p>
+      <div class="hero-btns" id="hero-btns">
+        <a href="#projects" class="btn btn-primary">&#62;_ Execute_Payload</a>
+        <a href="#contact" class="btn btn-outline">Ping_Me</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">bash — m0ng3sh3ll@kali: ~</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="t-cmd">whoami</span>
+          </div>
+          <!-- <div class="t-out">
+            <p>Alexandre Junior</p>
+          </div>
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="t-cmd">printenv</span>
+          </div> 
+          <div class="t-out">-->
+          <p>
+            Alexandre Junior is an Offensive Security professional focused on Red Team operations and advanced
+            penetration testing. With a strong mindset for simulating real-world adversaries, he specializes in
+            identifying weaknesses across infrastructure, wireless networks, and cloud environments.
+          </p>
+          <p>
+            Known for combining technical depth with practical attack simulation, his work involves not only breaking
+            systems but also developing tools and methodologies to enhance offensive capabilities.
+          </p>
+
+          <div class="skill-group">
+            <br>
+            <h3>[Professional Snapshot]</h3>
+            <ul>
+              <li><strong>Name:</strong> Alexandre Junior</li>
+              <li><strong>Role:</strong> Red Team Operator / Pentester</li>
+              <li><strong>Focus Areas:</strong>
+                <ul>
+                  <li>Red Team Operations</li>
+                  <li>Infrastructure Pentest (Internal & External)</li>
+                  <li>Wi-Fi Security Assessments</li>
+                  <li>Cloud Assumed Breach Scenarios</li>
+                  <li>Social Engineering (Phishing, AI-assisted)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <br>
+            <h3>[Expertise]</h3>
+            <p>His work covers a broad spectrum of offensive security domains:</p>
+            <ul>
+              <li>
+                <strong>Red Team & Adversary Simulation:</strong>
+                Execution of realistic attack scenarios, including lateral movement, privilege escalation, and evasion
+                techniques.
+              </li>
+              <li>
+                <strong>Infrastructure Security:</strong>
+                Comprehensive penetration testing of internal and external networks, identifying critical
+                vulnerabilities.
+              </li>
+              <li>
+                <strong>Wireless Security:</strong>
+                Advanced Wi-Fi pentesting, including rogue access points and credential harvesting.
+              </li>
+              <li>
+                <strong>Cloud Security (Assumed Breach):</strong>
+                Simulation of post-compromise scenarios focusing on persistence, pivoting, and data exposure.
+              </li>
+              <li>
+                <strong>Social Engineering:</strong>
+                Design and execution of phishing campaigns, leveraging automation and AI to increase effectiveness.
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <br>
+            <h3>[Development & Research]</h3>
+            <p>Enthusiast in offensive tooling and automation, working with:</p>
+            <ul>
+              <li>Python, PowerShell, Golang</li>
+              <li>
+                Creator of <strong>Nullfang</strong> (<a href="https://nullfang.gitbook.io/nullfang" target="_blank"
+                  rel="noopener">Link</a>), designed to support Red Team workflows.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="t-line">
+          <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">bash — ls -la /usr/bin/skills</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="t-cmd">./enumerate_skills.sh</span>
+          </div>
+          <br />
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>[Languages]</h3>
+              <ul>
+                <li>Python</li>
+                <li>Golang</li>
+                <li>PowerShell</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>[Offensive]</h3>
+              <ul>
+                <li>Metasploit</li>
+                <li>Burp Suite</li>
+                <li>Nmap</li>
+                <li>Custom C2</li>
+                <li>Wireshark</li>
+                <li>Aircrack-ng</li>
+                <li>Bettercap</li>
+                <li>Responder</li>
+                <li>Impacket</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>[Systems]</h3>
+              <ul>
+                <li>Linux Kernel</li>
+                <li>Windows Internals</li>
+                <li>Docker</li>
+                <li>QEMU / KVM</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+          </div>
+          <br />
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="section-title">Latest_Projects.d</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#9741;</div>
+            <div class="project-tags">
+              <span class="tag">Nullfang</span>
+            </div>
+          </div>
+          <h3>Nullfang</h3>
+          <p>NullFang is an open source offensive intelligence tool that redefines the concept of reconnaissance on
+            Windows networks. Designed to combine the precision of an SMB scanner with the intelligence of a forensic
+            analysis system, it creates a unique solution for security professionals who need to map, analyze and
+            extract
+            critical data from corporate infrastructures.</p>
+          <div class="project-footer">
+            <a href="https://github.com/m0ng3sh3ll/Nullfang">&#60;/&#62; Source_Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIES / CVEs -->
+    <section id="studies">
+      <h2 class="section-title">Research_&_CVEs.log</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">&#9888;</div>
+            <div class="project-tags">
+              <span class="tag">RESEARCH</span>
+              <span class="tag">EXPLOIT</span>
+            </div>
+          </div>
+          <h3>Check Point VPN Bypassing</h3>
+          <p>A technical deep dive into bypassing Check Point Gaia compliance checks. Demonstrates how relying on
+            client-side registry values for VPN authorization can lead to unauthorized internal network access.</p>
+          <div class="project-footer">
+            <a href="https://www.sidechannel.blog/acesso-a-rede-interna-explorando-uma-misconfig-do-check-point/"
+              target="_blank" rel="noopener">View_Research</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">bash — nc -nv 127.0.0.1 1337</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="t-cmd">cat contact_info.json | jq</span>
+          </div>
+          <br />
+          <pre>{
+  "status": "Listening for connections...",
+  "protocols": [
+    {
+      "type": "Email",
+      "address": "m0ng3shell@proton.me"
+    },
+    {
+      "type": "GitHub",
+      "url": "github.com/M0ng3Sh3ll"
+    },
+    {
+      "type": "LinkedIn",
+      "url": "https://www.linkedin.com/in/frizanijunior"
+    }
+  ]
+}</pre>
+          <div class="contact-btns">
+            <a href="mailto:m0ng3shell@proton.me" class="contact-btn">&#9993; Send_Mail</a>
+            <a href="https://github.com/M0ng3Sh3ll" target="_blank" rel="noopener" class="contact-btn">&#9670;
+              GitHub</a>
+            <a href="https://www.linkedin.com/in/frizanijunior" target="_blank" rel="noopener"
+              class="contact-btn">&#9794;
+              LinkedIn</a>
+          </div>
+          <br />
+          <div class="t-line">
+            <span class="t-prompt">m0ng3sh3ll@kali:~$</span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><span class="eof">EOF</span> — Crafted by <span class="name">M0ng3Sh3ll</span> &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
